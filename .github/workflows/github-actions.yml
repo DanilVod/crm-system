@@ -26,3 +26,8 @@ jobs:
         run: npm run test:unit
       - name: lint code
         run: npm run lint
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

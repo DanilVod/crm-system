@@ -9,9 +9,11 @@
     "lint": "eslint --ignore-path .gitignore --fix src",
     "format": "prettier .  --write",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 -c .storybook watch-css - s  ./src",
-    "build:storybook": " build-storybook ",
+    "build-storybook": " NODE_OPTIONS=--openssl-legacy-provider build-storybook ",
     "test:unit": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
+    "chromatic:rebuild": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --force-rebuild"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
@@ -54,6 +56,7 @@
     "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-styled-components": "^2.0.7",
+    "chromatic": "^6.5.6",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
