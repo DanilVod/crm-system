@@ -53,7 +53,7 @@ export const StyledButton = styled.div<Pick<IButton, 'type' | 'color'>>`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 162px;
+  min-width: 160px;
   height: 42px;
   border-radius: 4px;
   font-family: 'Poppins';
