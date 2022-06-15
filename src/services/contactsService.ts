@@ -1,5 +1,5 @@
 import { IContact } from './../types/IContact';
-import $api from '.';
+
 import axios, { AxiosResponse } from 'axios';
 
 export const getContacts = (): Promise<AxiosResponse<IContact[]>> => {
