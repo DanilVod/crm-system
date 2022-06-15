@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { ColorsName } from '@/constants/global.styles';
 import { StyledButton } from './Button.style';
 
+//
 export interface IButton {
   color?: ColorsName;
   onclick?: () => void;
