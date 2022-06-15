@@ -1,18 +1,9 @@
-import tw from 'twin.macro';
-import { Counter } from './features/counter/Counter';
+import { LeftNavigatorMenu } from '@/features/LeftNavigatorMenu/LeftNavigatorMenu';
 
-function App() {
-  const Wrapper = tw.section`flex w-full`;
-  const Column = tw.div`w-1/2`;
-
+export function App() {
   return (
     <div className="App">
-      <Wrapper>
-        <Column>Hi</Column>
-        <Counter />
-      </Wrapper>
+      <LeftNavigatorMenu></LeftNavigatorMenu>
     </div>
   );
 }
-
-export default App;

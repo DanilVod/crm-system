@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // Define a type for the slice state
 interface CounterState {
@@ -11,7 +11,7 @@ const initialState: CounterState = {
 };
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
