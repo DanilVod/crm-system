@@ -1,4 +1,4 @@
-Дизайн + Конфигурация + Разработка + CI/CD + Deploy
+Дизайн + Конфигурация + Разработка + CI/CD + Deploy <br>
 Стэк:
 TS
 Сборщик Vite(pnpm)
@@ -7,5 +7,5 @@ TS
 Роутинг Routev6
 Запросы Axios
 Утилиты Lodash
-
+<br>
 CI: build, test:unit, test:e2e, lint, type:check,
