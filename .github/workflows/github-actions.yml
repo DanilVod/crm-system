@@ -11,6 +11,10 @@ jobs:
       matrix:
         node-varsion: [17.x]
     steps:
+     - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
       - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -28,8 +32,8 @@ jobs:
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
-          workingDir: ./src
+          workingDir: ./
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: storybook-static
-          exitZeorOnChanges: true
+          exitZeroOnChanges: true
