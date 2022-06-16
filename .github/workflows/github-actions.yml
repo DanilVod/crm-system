@@ -28,6 +28,8 @@ jobs:
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
+          workingDir: ./src
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: storybook-static
+          exitZeorOnChanges: true
