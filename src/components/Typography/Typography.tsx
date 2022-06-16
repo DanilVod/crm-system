@@ -11,6 +11,7 @@ interface ITypography {
 const StyledText = styled.div<ITypography>`
   color: ${({ color }) => colors[color || 'none']};
   font-size: ${({ size }) => (size ? size + 'pt' : '12pt')};
+  font-family: 'Poppins';
   font-weight: ${({ weight }) => {
     switch (weight) {
       case 'normal':
