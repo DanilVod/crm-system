@@ -1,4 +1,4 @@
-Дизайн + Конфигурация + Разработка + CI/CD + Deploy <br>
+Дизайн + Конфигурация + Разработка + тесты (UI-тест[Chromatic])+ CI/CD + Deploy(Netlify ) <br>
 Стэк:
 TS
 Сборщик Vite(pnpm)
