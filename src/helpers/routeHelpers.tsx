@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { Iroutes } from '../routes';
-
 import { colors } from '../constants/global.styles';
 
 export const RenderRoutes = ({ routes }: { routes: Iroutes[] }) => (
@@ -14,7 +13,7 @@ export const RenderRoutes = ({ routes }: { routes: Iroutes[] }) => (
         element={<React.Suspense> {el.element}</React.Suspense>}
       />
     ))}
-    <Route element={<h1>Not Found!</h1>} />
+    {/* <Route element={<h1>Not Found!</h1>} /> */}
   </Routes>
 );
 
@@ -26,7 +25,7 @@ export const displayRouteMenu = (routes: Iroutes[]) => {
   const singleRoute = (route: Iroutes) => {
     return (
       <NavigatorRouter key={route.name}>
-        <Link to={route.path}>
+        <Link to={route.path} data-testid={route.name}>
           <div className="flex">
             <IconMenuContainer>{route.icon}</IconMenuContainer>
             <LabelMenuContainer>{route.name}</LabelMenuContainer>

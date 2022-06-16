@@ -1,13 +1,16 @@
 import React from 'react';
-import { ROUTES } from '@/routes';
+import { Iroutes } from '@/routes';
 import { displayRouteMenu, RenderRoutes } from '@/helpers/routeHelpers';
 
-export const Navigator = () => {
+interface NavigatorProps {
+  routes: Iroutes[];
+}
+export const Navigator = ({ routes }: NavigatorProps) => {
   return (
     <div>
-      <div className="routes">{displayRouteMenu(ROUTES)}</div>
+      <div className="routes">{displayRouteMenu(routes)}</div>
       <div>
-        <RenderRoutes routes={ROUTES} />
+        <RenderRoutes routes={routes} />
       </div>
     </div>
   );
