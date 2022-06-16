@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+build-storybook.log*
 .pnpm-store
 node_modules
 dist
@@ -14,6 +15,8 @@ dist-ssr
 # Storybook
 storybook-static
 docs-build
+coverage
+penssl-legacy-provider
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
