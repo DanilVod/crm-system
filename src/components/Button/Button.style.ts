@@ -54,7 +54,7 @@ export const StyledButton = styled.div<Pick<IButton, 'type' | 'color'>>`
   justify-content: center;
   align-items: center;
   min-width: 160px;
-  height: 42px;
+  height: 40px;
   border-radius: 4px;
   font-family: 'Poppins';
   color: ${({ color }) => colors[color || 'none']};
