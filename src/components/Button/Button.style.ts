@@ -16,7 +16,7 @@ const handleButtonType = ({ type }: Pick<IButton, 'type'>) => {
 const NormalButton = css`
   background-color: ${colors['accentBlue']};
   box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
-  ${colors['white']}
+  color: ${colors['white']};
   :hover {
     background-color: #34aff9;
     box-shadow: 0px 8px 16px rgba(52, 175, 249, 0.2);
@@ -58,7 +58,8 @@ export const StyledButton = styled.div<Pick<IButton, 'type' | 'color'>>`
   height: 42px;
   border-radius: 4px;
   font-family: 'Poppins';
-
+  font-weight: 500;
+  color: ${({ color = 'none' }) => colors[color]};
   :hover {
     cursor: pointer;
   }
