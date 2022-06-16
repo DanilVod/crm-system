@@ -53,8 +53,8 @@ export const StyledButton = styled.div<Pick<IButton, 'type' | 'color'>>`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 160px;
-  height: 40px;
+  min-width: 162px;
+  height: 42px;
   border-radius: 4px;
   font-family: 'Poppins';
   color: ${({ color }) => colors[color || 'none']};
