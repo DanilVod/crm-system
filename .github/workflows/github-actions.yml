@@ -12,6 +12,8 @@ jobs:
         node-varsion: [17.x]
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -20,14 +22,18 @@ jobs:
         run: npm install
       - name: build project
         run: npm run build
-      - name: build storybook
-        run: npm run build:storybook
       - name: unit test
         run: npm run test:unit
       - name: lint code
         run: npm run lint
+      - name: build storybook
+        run: npm run build-storybook
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
+          workingDir: ./
+          token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: storybook-static
+          exitZeroOnChanges: true
