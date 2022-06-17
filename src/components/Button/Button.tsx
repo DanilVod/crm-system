@@ -4,9 +4,9 @@ import { StyledButton } from './Button.style';
 
 export type buttonType = 'normal' | 'outlined' | 'empty';
 export interface IButton {
-  color?: ColorsName;
+  color: ColorsName;
   onclick?: () => void;
-  type?: buttonType;
+  type: buttonType;
   children: ReactNode;
 }
 

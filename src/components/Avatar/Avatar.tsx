@@ -3,7 +3,7 @@ import { AvatarContainer, AvatarHover, StyledAvatar } from './Avatar.style';
 export type avatarSize = 'large' | 'medium' | 'small';
 export interface AvatarProps {
   image: string;
-  size?: avatarSize;
+  size: avatarSize;
 }
 
 export const Avatar = (props: AvatarProps) => {
