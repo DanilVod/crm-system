@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { colors } from '@/constants/global.styles';
 
-import { IButton } from './Button';
+import { buttonType, IButton } from './Button';
 
-const handleButtonType = ({ type }: Pick<IButton, 'type'>) => {
+const handleButtonType = (type: buttonType) => {
   switch (type) {
     case 'empty':
       return EmptyButton;
@@ -50,7 +50,7 @@ const EmptyButton = css`
   }
 `;
 
-export const StyledButton = styled.div<Pick<IButton, 'type' | 'color'>>`
+export const StyledButton = styled.div<Required<Pick<IButton, 'type' | 'color'>>>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,9 +59,9 @@ export const StyledButton = styled.div<Pick<IButton, 'type' | 'color'>>`
   border-radius: 4px;
   font-family: 'Poppins';
   font-weight: 500;
-  color: ${({ color = 'none' }) => colors[color]};
+  color: ${({ color }) => colors[color]};
   :hover {
     cursor: pointer;
   }
-  ${({ type }) => handleButtonType({ type: type })}
+  ${({ type }) => handleButtonType(type)}
 `;
