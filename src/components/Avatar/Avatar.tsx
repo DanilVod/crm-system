@@ -4,6 +4,7 @@ export type avatarSize = 'large' | 'medium' | 'small';
 export interface AvatarProps {
   image: string;
   size: avatarSize;
+  isActive: boolean;
 }
 
 export const Avatar = (props: AvatarProps) => {
