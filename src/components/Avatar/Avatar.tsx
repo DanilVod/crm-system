@@ -1,4 +1,5 @@
 import { AvatarContainer, AvatarHover, StyledAvatar } from './Avatar.style';
+import clsx from 'clsx';
 
 export type avatarSize = 'large' | 'medium' | 'small';
 export interface AvatarProps {
@@ -10,7 +11,15 @@ export interface AvatarProps {
 export const Avatar = (props: AvatarProps) => {
   return (
     <AvatarContainer>
-      <StyledAvatar {...props} src={props.image} data-testid="avatar" alt="avatar" />
+      <StyledAvatar
+        {...props}
+        src={props.image}
+        className={clsx({
+          active: props.isActive,
+        })}
+        data-testid="avatar"
+        alt="avatar"
+      />
       {props.size === 'large' && <AvatarHover size={props.size} />}
     </AvatarContainer>
   );
