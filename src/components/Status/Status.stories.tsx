@@ -18,7 +18,4 @@ const Template: ComponentStory<typeof Status> = (args) => (
 export const Example = Template.bind({});
 Example.args = {
   type: 'Top rated',
-  iconsConfig: {
-    'Top rated': <ContactsIcon />,
-  },
 };
