@@ -23,9 +23,8 @@ const StyledPlaceholder = styled.div`
 
 const PlaceholderValue = styled.input`
   background: none;
-  :focus {
-    outline: none;
-  }
+  border: none;
+  outline: none;
 `;
 const PlaceholderLine = styled.div`
   position: absolute;

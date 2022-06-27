@@ -15,5 +15,8 @@ const Template: ComponentStory<typeof Placeholder> = (args) => (
 
 export const Example = Template.bind({});
 Example.args = {
+  label: 'First name',
+  placeholderText: 'Jane',
   type: 'default',
+  onInputText: (e) => console.log(e),
 };
