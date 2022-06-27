@@ -1,0 +1,19 @@
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Placeholder } from '@/components';
+import tw from 'twin.macro';
+
+export default {
+  title: 'Example/Placeholder',
+  component: Placeholder,
+} as ComponentMeta<typeof Placeholder>;
+const Wrapper = tw.section`flex w-1/6`;
+const Template: ComponentStory<typeof Placeholder> = (args) => (
+  <Wrapper>
+    <Placeholder {...args} />
+  </Wrapper>
+);
+
+export const Example = Template.bind({});
+Example.args = {
+  type: 'default',
+};

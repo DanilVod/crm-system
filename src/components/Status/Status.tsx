@@ -1,4 +1,5 @@
 import { Typography } from '@/components/';
+import React from 'react';
 import { StyledStatus } from './Status.style';
 
 type emailStatus = 'Scheduled' | 'Sent' | 'Archived' | 'Draft';
@@ -16,7 +17,7 @@ export interface StatusComponentProps {
   iconsConfig?: { [key in allStatus]?: JSX.Element };
 }
 
-const StatusComponent = ({ type, iconsConfig }: StatusComponentProps) => {
+export const Status = ({ type, iconsConfig }: StatusComponentProps) => {
   return (
     <StyledStatus type={type}>
       <div style={{ padding: '1px 10px', display: 'flex', alignItems: 'center' }}>
@@ -27,8 +28,4 @@ const StatusComponent = ({ type, iconsConfig }: StatusComponentProps) => {
       </div>
     </StyledStatus>
   );
-};
-
-export const Status = (props: StatusComponentProps) => {
-  return <StatusComponent {...props} />;
 };

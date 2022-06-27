@@ -38,7 +38,6 @@ const defineStatusColor = (type: allStatus) => {
   }
 };
 
-const IconContainer = styled.div``;
 export const StyledStatus = styled.div<{ type: allStatus }>`
   display: flex;
   justify-content: center;

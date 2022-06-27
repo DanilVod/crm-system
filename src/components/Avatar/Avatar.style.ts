@@ -42,10 +42,10 @@ const AssociatedAvatar = css`
   height: 24px;
   width: 24px;
 `;
-export const StyledAvatar = styled.img<Required<Pick<AvatarProps, 'size'>>>`
+export const StyledAvatar = styled.img<Pick<AvatarProps, 'size'>>`
   width: 50px;
   border-radius: 50%;
-  ${({ size }) => handleAvatarType(size)}
+  ${({ size = 'small' }) => handleAvatarType(size)}
 `;
 export const AvatarContainer = styled.div`
   display: block;

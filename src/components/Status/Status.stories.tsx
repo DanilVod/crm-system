@@ -1,6 +1,4 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ContactsIcon from '@/assets/contacts.svg?component';
 import { Status } from '@/components';
 import tw from 'twin.macro';
 

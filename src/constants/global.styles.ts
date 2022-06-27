@@ -11,6 +11,8 @@ export const colors = {
   white: '#FFFFFF',
   darkBlue: '#334D6E',
   iconGray: '#C2CFE0',
+  textHelpGray: '#818E9B',
+  textLine: '#D3D8DD',
   none: '',
 };
 

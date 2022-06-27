@@ -1,11 +1,11 @@
-import React from 'react';
-import { Typography, Button, Avatar, Status } from '@/components';
+import React, { useEffect, useState } from 'react';
+import { Typography, Button, Avatar, Status, Placeholder } from '@/components';
 import { getContacts } from '@/services/contactsService';
 import ContactsIcon from '@/assets/contacts.svg?component';
 import styled from 'styled-components';
 import { StatusComponentProps } from '@/components/Status/Status';
 
-const StyledStatusIcon = styled(ContactsIcon)`
+export const StyledStatusIcon = styled(ContactsIcon)`
   width: 15px;
   height: 15px;
   path {
@@ -16,16 +16,35 @@ const iconsConfig: Pick<StatusComponentProps, 'iconsConfig'>['iconsConfig'] = {
   Sent: <StyledStatusIcon />,
 };
 export const Contacts = () => {
-  console.log(getContacts().then((res) => console.log(res.data[0])));
+  useEffect(() => {
+    console.log(getContacts().then((res) => console.log(res.data[0])));
+  }, []);
+
+  const [value, setValue] = useState<string>('');
+
+  const handleOnInputText = React.useCallback((e: string) => {
+    setValue(e);
+  }, []);
+  // const onChange = React.useCallback((e: any) => setValue(e), [setValue]);
   return (
-    <div>
+    <>
+      <Placeholder
+        placeholderText="Jane"
+        type="show"
+        label="First name"
+        value={value}
+        onInputText={handleOnInputText}
+      />
       <Status iconsConfig={iconsConfig} type="Sent" />
-      <Avatar image="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/404.jpg" />
+      <Avatar
+        image="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/404.jpg"
+        isActive={false}
+      />
       <Button>
         <Typography>Btn</Typography>
       </Button>
-    </div>
+    </>
   );
 };
 
-export default Contacts;
+export default React.memo((props) => <Contacts {...props} />);

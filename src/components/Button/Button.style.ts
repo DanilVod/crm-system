@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { colors } from '@/constants/global.styles';
 
-import { buttonType, IButton } from './Button';
+import { buttonType, ButtonProps } from './Button';
 
 const handleButtonType = (type: buttonType) => {
   switch (type) {
@@ -50,7 +50,7 @@ const EmptyButton = css`
   }
 `;
 
-export const StyledButton = styled.div<Required<Pick<IButton, 'type' | 'color'>>>`
+export const StyledButton = styled.div<Pick<ButtonProps, 'type' | 'color'>>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,9 +59,9 @@ export const StyledButton = styled.div<Required<Pick<IButton, 'type' | 'color'>>
   border-radius: 4px;
   font-family: 'Poppins';
   font-weight: 500;
-  color: ${({ color }) => colors[color]};
+  color: ${({ color = 'none' }) => colors[color]};
   :hover {
     cursor: pointer;
   }
-  ${({ type }) => handleButtonType(type)}
+  ${({ type = 'normal' }) => handleButtonType(type)}
 `;

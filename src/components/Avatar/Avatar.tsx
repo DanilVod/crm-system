@@ -1,10 +1,11 @@
 import { AvatarContainer, AvatarHover, StyledAvatar } from './Avatar.style';
 import clsx from 'clsx';
+import React from 'react';
 
 export type avatarSize = 'large' | 'medium' | 'small';
 export interface AvatarProps {
   image: string;
-  size: avatarSize;
+  size?: avatarSize;
   isActive: boolean;
 }
 
@@ -24,7 +25,6 @@ export const Avatar = (props: AvatarProps) => {
     </AvatarContainer>
   );
 };
-
 Avatar.defaultProps = {
   size: 'medium',
   isActive: false,
