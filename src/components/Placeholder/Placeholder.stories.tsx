@@ -5,6 +5,7 @@ import tw from 'twin.macro';
 export default {
   title: 'Example/Placeholder',
   component: Placeholder,
+  argTypes: { onInputText: { action: 'clicked' } },
 } as ComponentMeta<typeof Placeholder>;
 const Wrapper = tw.section`flex w-1/6`;
 const Template: ComponentStory<typeof Placeholder> = (args) => (
@@ -18,5 +19,4 @@ Example.args = {
   label: 'First name',
   placeholderText: 'Jane',
   type: 'default',
-  onInputText: (e) => console.log(e),
 };

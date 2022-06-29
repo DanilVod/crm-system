@@ -13,6 +13,7 @@ interface PlaceholderProps {
 }
 
 const StyledPlaceholder = styled.div`
+  font-family: 'Poppins';
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
