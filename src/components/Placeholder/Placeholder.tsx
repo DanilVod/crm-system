@@ -1,8 +1,13 @@
-import { colors } from '@/constants/global.styles';
 import { InputTypes } from '@/types/share';
 import React, { useState } from 'react';
 import { Dispatch } from 'react';
-import styled from 'styled-components';
+import {
+  PlaceholderLabel,
+  PlaceholderLine,
+  PlaceholderLineActive,
+  PlaceholderValue,
+  StyledPlaceholder,
+} from './Placeholder.style';
 
 interface PlaceholderProps {
   type?: InputTypes;
@@ -11,41 +16,6 @@ interface PlaceholderProps {
   placeholderText?: string;
   value?: string;
 }
-
-const StyledPlaceholder = styled.div`
-  font-family: 'Poppins';
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
-  position: relative;
-  min-width: 302px;
-  height: 48px;
-`;
-
-const PlaceholderValue = styled.input`
-  background: none;
-  border: none;
-  outline: none;
-`;
-const PlaceholderLine = styled.div`
-  position: absolute;
-  bottom: 0;
-  height: 1px;
-  width: -webkit-fill-available;
-  border-bottom: 1px solid ${colors['textLine']};
-`;
-const PlaceholderLineActive = styled(PlaceholderLine)`
-  border-bottom: 1px solid ${colors['textHelpGray']};
-`;
-const PlaceholderLabel = styled.label`
-  font-size: 11px;
-  color: ${colors['textHelpGray']};
-  font-weight: 500;
-  transition: ease-in-out 0.3s;
-  ${PlaceholderValue}:focus-within ~ & {
-    color: ${colors['accentBlue']};
-  }
-`;
 
 export const Placeholder = (props: PlaceholderProps) => {
   const [isFocus, setIsFocus] = useState(false);
@@ -72,6 +42,7 @@ export const Placeholder = (props: PlaceholderProps) => {
     </StyledPlaceholder>
   );
 };
+
 Placeholder.defaultProps = {
   type: 'default',
 };
