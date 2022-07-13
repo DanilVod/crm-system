@@ -14,6 +14,7 @@ describe('Placeholder', () => {
     );
     const searchInput = queryByPlaceholderText('jane');
 
+    
     fireEvent.change(searchInput, { target: { value: 'su' } });
     expect(searchInput.value).toBe('su');
   });
