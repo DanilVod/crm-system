@@ -6,14 +6,19 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "prepare": "husky install",
     "lint": "eslint --ignore-path .gitignore --fix src",
-    "format": "prettier .  --write",
+    "lint:write": "eslint --debug src/ --fix",
+    "format": "prettier --write --ignore-unknown .",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 -c .storybook watch-css - s  ./src",
     "build-storybook": "build-storybook ",
     "test:unit": "jest",
     "test:coverage": "jest --coverage",
     "chromatic": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
     "chromatic:rebuild": "chromatic --project-token=CHROMATIC_PROJECT_TOKEN --force-rebuild"
+  },
+  "lint-staged": {
+    "*.(js|jsx|ts|tsx)": ["npm run lint:write", "git add"]
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
@@ -30,6 +35,8 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@honkhonk/vite-plugin-svgr": "^1.1.0",
     "@mdx-js/react": "^2.1.1",
     "@storybook/addon-actions": "^6.5.7",
@@ -63,10 +70,12 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-storybook": "^0.5.12",
+    "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^13.0.3",
     "path": "^0.12.7",
     "postcss": "^8.4.14",
     "prettier": "2.6.2",
@@ -81,10 +90,5 @@
     "vite-plugin-svgr": "^2.1.0",
     "vite-plugin-windicss": "^1.8.4",
     "vite-tsconfig-paths": "^3.5.0"
-  },
-  "babelMacros": {
-    "twin": {
-      "preset": "styled-components"
-    }
   }
 }

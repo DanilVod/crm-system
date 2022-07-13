@@ -29,7 +29,7 @@ export const Placeholder = (props: PlaceholderProps) => {
   }
 
   return (
-    <StyledPlaceholder {...props}>
+    <StyledPlaceholder {...props} data-testid="placeholder">
       <PlaceholderValue
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
