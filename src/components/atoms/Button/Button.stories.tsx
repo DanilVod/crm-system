@@ -5,7 +5,7 @@ import { Button } from "@/components";
 import tw from "twin.macro";
 
 export default {
-  title: "Example/Button",
+  title: "Atoms/Button",
   component: Button,
 } as ComponentMeta<typeof Button>;
 const Wrapper = tw.section`flex w-1/6`;

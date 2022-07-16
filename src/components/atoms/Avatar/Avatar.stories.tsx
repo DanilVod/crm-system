@@ -5,7 +5,7 @@ import { Avatar } from "@/components";
 import tw from "twin.macro";
 
 export default {
-  title: "Example/Avatar",
+  title: "Atoms/Avatar",
   component: Avatar,
 } as ComponentMeta<typeof Avatar>;
 const Wrapper = tw.section`flex w-1/6`;

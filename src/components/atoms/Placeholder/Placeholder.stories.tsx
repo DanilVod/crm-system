@@ -3,7 +3,7 @@ import { Placeholder } from "@/components";
 import tw from "twin.macro";
 
 export default {
-  title: "Example/Placeholder",
+  title: "Atoms/Placeholder",
   component: Placeholder,
   argTypes: { onInputText: { action: "clicked" } },
 } as ComponentMeta<typeof Placeholder>;

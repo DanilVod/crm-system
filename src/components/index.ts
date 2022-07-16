@@ -1,8 +1,8 @@
-import { Placeholder } from "./Placeholder/Placeholder";
-import { Avatar } from "./Avatar/Avatar";
-import { Typography } from "./Typography/Typography";
-import { Button } from "./Button/Button";
-import { Navigator } from "./Navigator/Navigator";
-import { Status } from "./Status/Status";
+import { Placeholder } from "./atoms/Placeholder/Placeholder";
+import { Avatar } from "./atoms/Avatar/Avatar";
+import { Typography } from "./atoms/Typography/Typography";
+import { Button } from "./atoms/Button/Button";
+import { Navigator } from "./atoms/Navigator/Navigator";
+import { Status } from "./atoms/Status/Status";
 
 export { Typography, Button, Navigator, Avatar, Status, Placeholder };

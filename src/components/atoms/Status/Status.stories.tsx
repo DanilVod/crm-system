@@ -3,7 +3,7 @@ import { Status } from "@/components";
 import tw from "twin.macro";
 
 export default {
-  title: "Example/Status",
+  title: "Atoms/Status",
   component: Status,
 } as ComponentMeta<typeof Status>;
 const Wrapper = tw.section`flex w-1/6`;
