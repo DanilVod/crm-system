@@ -1,5 +1,5 @@
-import { Navigator } from '@/components';
-import { ROUTES } from '@/routes';
+import { Navigator } from "@/components";
+import { ROUTES } from "@/routes";
 
 export function LeftNavigatorMenu() {
   return (

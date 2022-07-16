@@ -1,13 +1,13 @@
-import { InputTypes } from '@/types/share';
-import React, { useState } from 'react';
-import { Dispatch } from 'react';
+import { InputTypes } from "@/types/share";
+import React, { useState } from "react";
+import { Dispatch } from "react";
 import {
   PlaceholderLabel,
   PlaceholderLine,
   PlaceholderLineActive,
   PlaceholderValue,
   StyledPlaceholder,
-} from './Placeholder.style';
+} from "./Placeholder.style";
 
 interface PlaceholderProps {
   type?: InputTypes;
@@ -36,13 +36,17 @@ export const Placeholder = (props: PlaceholderProps) => {
         onChange={inputHandler}
         placeholder={props.placeholderText}
         value={props.value}
-        disabled={props.type === 'show'}></PlaceholderValue>
-      {props.type != 'new' && <PlaceholderLabel>{props.label}</PlaceholderLabel>}
-      {props.type != 'show' && (isFocus ? <PlaceholderLineActive /> : <PlaceholderLine />)}
+        disabled={props.type === "show"}
+      ></PlaceholderValue>
+      {props.type != "new" && (
+        <PlaceholderLabel>{props.label}</PlaceholderLabel>
+      )}
+      {props.type != "show" &&
+        (isFocus ? <PlaceholderLineActive /> : <PlaceholderLine />)}
     </StyledPlaceholder>
   );
 };
 
 Placeholder.defaultProps = {
-  type: 'default',
+  type: "default",
 };

@@ -1,8 +1,8 @@
-import { colors } from '@/constants/global.styles';
-import styled from 'styled-components';
+import { colors } from "@/constants/global.styles";
+import styled from "styled-components";
 
 export const StyledPlaceholder = styled.div`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
@@ -21,17 +21,17 @@ export const PlaceholderLine = styled.div`
   bottom: 0;
   height: 1px;
   width: -webkit-fill-available;
-  border-bottom: 1px solid ${colors['textLine']};
+  border-bottom: 1px solid ${colors["textLine"]};
 `;
 export const PlaceholderLineActive = styled(PlaceholderLine)`
-  border-bottom: 1px solid ${colors['textHelpGray']};
+  border-bottom: 1px solid ${colors["textHelpGray"]};
 `;
 export const PlaceholderLabel = styled.label`
   font-size: 11px;
-  color: ${colors['textHelpGray']};
+  color: ${colors["textHelpGray"]};
   font-weight: 500;
   transition: ease-in-out 0.3s;
   ${PlaceholderValue}:focus-within ~ & {
-    color: ${colors['accentBlue']};
+    color: ${colors["accentBlue"]};
   }
 `;

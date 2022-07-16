@@ -1,23 +1,23 @@
-import styled, { css } from 'styled-components';
-import { colors } from '@/constants/global.styles';
-import { AvatarProps, avatarSize } from './Avatar';
+import styled, { css } from "styled-components";
+import { colors } from "@/constants/global.styles";
+import { AvatarProps, avatarSize } from "./Avatar";
 
 const convertSizeFromEnumTo = (size: avatarSize) => {
   switch (size) {
-    case 'large':
-      return '104px';
-    case 'medium':
-      return '46px';
+    case "large":
+      return "104px";
+    case "medium":
+      return "46px";
     default:
-      return '24px';
+      return "24px";
   }
 };
 
 const handleAvatarType = (size: avatarSize) => {
   switch (size) {
-    case 'large':
+    case "large":
       return ContactAvatar;
-    case 'medium':
+    case "medium":
       return ProfileAvatar;
     default:
       return AssociatedAvatar;
@@ -34,7 +34,7 @@ const ProfileAvatar = css`
   height: 46px;
   width: 46px;
   &.active {
-    border: 2px solid ${colors['accentBlue']};
+    border: 2px solid ${colors["accentBlue"]};
   }
 `;
 const AssociatedAvatar = css`
@@ -42,19 +42,19 @@ const AssociatedAvatar = css`
   height: 24px;
   width: 24px;
 `;
-export const StyledAvatar = styled.img<Pick<AvatarProps, 'size'>>`
+export const StyledAvatar = styled.img<Pick<AvatarProps, "size">>`
   width: 50px;
   border-radius: 50%;
-  ${({ size = 'small' }) => handleAvatarType(size)}
+  ${({ size = "small" }) => handleAvatarType(size)}
 `;
 export const AvatarContainer = styled.div`
   display: block;
   position: relative;
 `;
 
-export const AvatarHover = styled.div<Required<Pick<AvatarProps, 'size'>>>`
+export const AvatarHover = styled.div<Required<Pick<AvatarProps, "size">>>`
   &::after {
-    content: '';
+    content: "";
     width: ${({ size }) => convertSizeFromEnumTo(size)};
     height: ${({ size }) => convertSizeFromEnumTo(size)};
     position: absolute;
@@ -62,7 +62,7 @@ export const AvatarHover = styled.div<Required<Pick<AvatarProps, 'size'>>>`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${colors['black']};
+    background: ${colors["black"]};
     opacity: 0;
     border-radius: 50%;
     cursor: pointer;

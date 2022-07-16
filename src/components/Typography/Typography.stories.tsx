@@ -1,10 +1,10 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Typography } from '@/components';
-import tw from 'twin.macro';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Typography } from "@/components";
+import tw from "twin.macro";
 
 export default {
-  title: 'Example/Typography',
+  title: "Example/Typography",
   component: Typography,
 } as ComponentMeta<typeof Typography>;
 const Wrapper = tw.section`flex w-1/6`;

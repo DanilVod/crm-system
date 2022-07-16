@@ -1,6 +1,6 @@
-import React from 'react';
-import { Iroutes } from '@/routes';
-import { displayRouteMenu, RenderRoutes } from '@/helpers/routeHelpers';
+import React from "react";
+import { Iroutes } from "@/routes";
+import { displayRouteMenu, RenderRoutes } from "@/helpers/routeHelpers";
 
 interface NavigatorProps {
   routes: Iroutes[];

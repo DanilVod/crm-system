@@ -20,7 +20,12 @@
 
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["jest", "node", "@testing-library/jest-dom", "@honkhonk/vite-plugin-svgr/client"]
+    "types": [
+      "jest",
+      "node",
+      "@testing-library/jest-dom",
+      "@honkhonk/vite-plugin-svgr/client"
+    ]
   },
 
   "include": ["src/**/*"],

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import styled, { css } from 'styled-components';
-import { Iroutes } from '../routes';
-import { colors } from '../constants/global.styles';
+import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import styled, { css } from "styled-components";
+import { Iroutes } from "../routes";
+import { colors } from "../constants/global.styles";
 
 export const RenderRoutes = ({ routes }: { routes: Iroutes[] }) => (
   <Routes>
@@ -39,7 +39,7 @@ export const displayRouteMenu = (routes: Iroutes[]) => {
   return (
     <NavigatorContainer>
       {routes.map((route, index) => {
-        if (route.isHidden) return '';
+        if (route.isHidden) return "";
         // if this route has sub-routes, then show the ROOT as a list item and recursively render a nested list of route links
         if (route.routes) {
           return (
@@ -60,7 +60,7 @@ const IconMenuContainer = styled.div(() => [
   css`
     margin-right: 1rem;
     svg path {
-      stroke: ${colors['iconGray']};
+      stroke: ${colors["iconGray"]};
     }
   `,
 ]);
@@ -68,7 +68,7 @@ const IconMenuContainer = styled.div(() => [
 const LabelMenuContainer = styled.div(() => [
   css`
     font-weight: 500;
-    color: ${colors['darkBlue']};
+    color: ${colors["darkBlue"]};
   `,
 ]);
 
@@ -88,10 +88,10 @@ const NavigatorRouter = styled.div(() => [
     line-height: 1.25rem;
     :hover {
       ${LabelMenuContainer} {
-        color: ${colors['accentBlue']};
+        color: ${colors["accentBlue"]};
       }
       svg path {
-        stroke: ${colors['accentBlue']};
+        stroke: ${colors["accentBlue"]};
       }
     }
   `,

@@ -1,37 +1,37 @@
-import { colors } from '@/constants/global.styles';
-import styled, { css } from 'styled-components';
-import { allStatus } from './Status';
+import { colors } from "@/constants/global.styles";
+import styled, { css } from "styled-components";
+import { allStatus } from "./Status";
 
 const greenStatus = css`
-  background-color: ${colors['green']};
+  background-color: ${colors["green"]};
 `;
 const purpleStatus = css`
-  background-color: ${colors['purple']};
+  background-color: ${colors["purple"]};
 `;
 const redStatus = css`
-  background-color: ${colors['red']};
+  background-color: ${colors["red"]};
 `;
 const yellowStatus = css`
-  background-color: ${colors['yellow']};
+  background-color: ${colors["yellow"]};
 `;
 const defineStatusColor = (type: allStatus) => {
   switch (type) {
-    case 'Completed':
-    case 'Sent':
-    case 'New':
-    case 'High':
+    case "Completed":
+    case "Sent":
+    case "New":
+    case "High":
       return greenStatus;
-    case 'Scheduled':
+    case "Scheduled":
       return purpleStatus;
-    case 'Archived':
-    case 'Ended':
-    case 'Fired':
-    case 'Urgent':
+    case "Archived":
+    case "Ended":
+    case "Fired":
+    case "Urgent":
       return redStatus;
-    case 'Draft':
-    case 'Active':
-    case 'Top rated':
-    case 'Low':
+    case "Draft":
+    case "Active":
+    case "Top rated":
+    case "Low":
       return yellowStatus;
     default:
       break;

@@ -1,11 +1,11 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button } from '@/components';
-import tw from 'twin.macro';
+import { Button } from "@/components";
+import tw from "twin.macro";
 
 export default {
-  title: 'Example/Button',
+  title: "Example/Button",
   component: Button,
 } as ComponentMeta<typeof Button>;
 const Wrapper = tw.section`flex w-1/6`;
@@ -17,6 +17,6 @@ const Template: ComponentStory<typeof Button> = (args) => (
 
 export const Example = Template.bind({});
 Example.args = {
-  type: 'normal',
-  children: 'Test button',
+  type: "normal",
+  children: "Test button",
 };

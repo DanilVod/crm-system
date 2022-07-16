@@ -1,1 +1,1 @@
-export type InputTypes = 'show' | 'new' | 'default';
+export type InputTypes = "show" | "new" | "default";

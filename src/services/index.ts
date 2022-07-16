@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const API_URL = `https://62989c54f2decf5bb7471410.mockapi.io/api/v1`;
 const $api = axios.create({

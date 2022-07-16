@@ -1,5 +1,5 @@
-import { LeftNavigatorMenu } from '@/features/LeftNavigatorMenu/LeftNavigatorMenu';
-import React from 'react';
+import { LeftNavigatorMenu } from "@/features/LeftNavigatorMenu/LeftNavigatorMenu";
+import React from "react";
 
 export const App = React.memo(() => {
   return (
@@ -8,4 +8,4 @@ export const App = React.memo(() => {
     </div>
   );
 });
-App.displayName = 'App';
+App.displayName = "App";

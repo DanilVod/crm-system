@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Typography, Button, Avatar, Status, Placeholder } from '@/components';
-import { getContacts } from '@/services/contactsService';
-import ContactsIcon from '@/assets/contacts.svg?component';
-import styled from 'styled-components';
-import { StatusComponentProps } from '@/components/Status/Status';
+import React, { useEffect, useState } from "react";
+import { Typography, Button, Avatar, Status, Placeholder } from "@/components";
+import { getContacts } from "@/services/contactsService";
+import ContactsIcon from "@/assets/contacts.svg?component";
+import styled from "styled-components";
+import { StatusComponentProps } from "@/components/Status/Status";
 
 export const StyledStatusIcon = styled(ContactsIcon)`
   width: 15px;
@@ -12,7 +12,7 @@ export const StyledStatusIcon = styled(ContactsIcon)`
     stroke: white;
   }
 `;
-const iconsConfig: Pick<StatusComponentProps, 'iconsConfig'>['iconsConfig'] = {
+const iconsConfig: Pick<StatusComponentProps, "iconsConfig">["iconsConfig"] = {
   Sent: <StyledStatusIcon />,
 };
 export const Contacts = () => {
@@ -20,7 +20,7 @@ export const Contacts = () => {
     console.log(getContacts().then((res) => console.log(res.data[0])));
   }, []);
 
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string>("");
 
   const handleOnInputText = React.useCallback((e: string) => {
     setValue(e);

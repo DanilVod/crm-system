@@ -1,22 +1,22 @@
-import styled, { css } from 'styled-components';
-import { colors } from '@/constants/global.styles';
+import styled, { css } from "styled-components";
+import { colors } from "@/constants/global.styles";
 
-import { buttonType, ButtonProps } from './Button';
+import { buttonType, ButtonProps } from "./Button";
 
 const handleButtonType = (type: buttonType) => {
   switch (type) {
-    case 'empty':
+    case "empty":
       return EmptyButton;
-    case 'outlined':
+    case "outlined":
       return OutlinedButton;
     default:
       return NormalButton;
   }
 };
 const NormalButton = css`
-  background-color: ${colors['accentBlue']};
+  background-color: ${colors["accentBlue"]};
   box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
-  color: ${colors['white']};
+  color: ${colors["white"]};
   :hover {
     background-color: #34aff9;
     box-shadow: 0px 8px 16px rgba(52, 175, 249, 0.2);
@@ -27,8 +27,8 @@ const NormalButton = css`
   }
 `;
 const OutlinedButton = css`
-  border: 1px solid ${colors['accentBlue']};
-  color: ${colors['accentBlue']};
+  border: 1px solid ${colors["accentBlue"]};
+  color: ${colors["accentBlue"]};
   :hover {
     color: #34aff9;
     border: 1px solid #34aff9;
@@ -41,7 +41,7 @@ const OutlinedButton = css`
 const EmptyButton = css`
   border: none;
   background-color: transparent;
-  color: ${colors['accentBlue']};
+  color: ${colors["accentBlue"]};
   :hover {
     color: #34aff9;
   }
@@ -50,18 +50,18 @@ const EmptyButton = css`
   }
 `;
 
-export const StyledButton = styled.div<Pick<ButtonProps, 'type' | 'color'>>`
+export const StyledButton = styled.div<Pick<ButtonProps, "type" | "color">>`
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 162px;
   height: 42px;
   border-radius: 4px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 500;
-  color: ${({ color = 'none' }) => colors[color]};
+  color: ${({ color = "none" }) => colors[color]};
   :hover {
     cursor: pointer;
   }
-  ${({ type = 'normal' }) => handleButtonType(type)}
+  ${({ type = "normal" }) => handleButtonType(type)}
 `;
