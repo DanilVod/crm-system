@@ -14,8 +14,10 @@ describe("Placeholder", () => {
     );
     const searchInput = queryByPlaceholderText("jane");
 
-    //d
+    if(searchInput) {
     fireEvent.change(searchInput, { target: { value: "su" } });
+    //@ts-ignore
     expect(searchInput.value).toBe("su");
+  }
   });
 });
