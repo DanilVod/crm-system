@@ -31,3 +31,4 @@ CI: build, test:unit, test:e2e, lint, type:check,
 - Run Lint Checks, TS Checks, Formatting & Unit Tests in Pre-commit via `lintstaged` & `husky`
 
 ---
+https://github.com/uchihamalolan/vite-react-ts

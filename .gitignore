@@ -27,3 +27,4 @@ penssl-legacy-provider
 *.njsproj
 *.sln
 *.sw?
+.eslintcache
